@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no"> 	
+	<link rel="stylesheet" href="css/2.css">
+	<link rel="stylesheet" href="css/sszx.css">
+	<link rel="stylesheet" href="css/rmtj.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="lib/swiper-4.5.0/dist/css/swiper.min.css">
+	<link rel="icon" href="img/20190526093044265_easyicon_net_32.ico" type="image/x-icon">
+</head>
+<body>
+	<header class="container clear">
+		<div class="d-2">TEMPLATE</div>
+		<ul class="nav">
+			<li><a href="index.html">首页</a></li>
+			<li><a href="rmtj.html">热门推荐</a></li>
+			<li><a href="ppjs.html">品牌介绍</a></li>
+			<li class="active"><a href="sszx.html">时尚咨询</a></li>
+		</ul>
+		<!-- 响应式菜单 -->
+		<div class="navbox">
+			<div class="nav-menu ">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<ul class="nav2 ">
+				<li></li>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="rmtj.html">热门推荐</a></li>
+				<li><a href="ppjs.html">品牌介绍</a></li>
+				<li class="active"><a href="sszx.html">时尚咨询</a></li>
+			</ul>
+		</div>
+	</header>
+	<div class="bjt-img">
+		<img src="img/U.jpg" alt="">
+	</div>
+	<ul class="sszx_container">
+		<li>
+			<a href="">
+				<div class="sscz_div1">
+					<span>服装定制的历史</span>
+					<span>2018-08-15</span>
+				</div>
+				<div class="sscz_div2">看似简单的句子之哦空管控的基地基地急急急急急是否石帆胜丰沙发上急急急急急急急急急急换个工会公会孤鸿寡鹄孤鸿寡打发打发打发打发打发鹄</div>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<div class="sscz_div1">
+					<span>我分享  我成长  我快乐</span>
+					<span>2018-08-15</span>
+				</div>
+				<div class="sscz_div2">看似简单的句子之哦空管控的基地基地急急急急急是否石帆胜丰沙发上急急急急急急急急急急换个工会公会孤鸿寡鹄孤鸿寡打发打发打发打发打发鹄</div>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<div class="sscz_div1">
+					<span>商业化的品牌须迎合消费者心理</span>
+					<span>2018-08-15</span>
+				</div>
+				<div class="sscz_div2">看似简单的句子之哦空管控的基地基地急急急急急是否石帆胜丰沙发上急急急急急急急急急急换个工会公会孤鸿寡鹄孤鸿寡打发打发打发打发打发鹄</div>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<div class="sscz_div1">
+					<span>2015年春夏商品企划设计师交流会圆满落幕</span>
+					<span>2018-08-15</span>
+				</div>
+				<div class="sscz_div2">看似简单的句子之哦空管控的基地基地急急急急急是否石帆胜丰沙发上急急急急急急急急急急换个工会公会孤鸿寡鹄孤鸿寡打发打发打发打发打发鹄</div>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<div class="sscz_div1">
+					<span>品牌介绍</span>
+					<span>2018-08-15</span>
+				</div>
+				<div class="sscz_div2">看似简单的句子之哦空管控的基地基地急急急急急是否石帆胜丰沙发上急急急急急急急急急急换个工会公会孤鸿寡鹄孤鸿寡打发打发打发打发打发鹄</div>
+			</a>
+		</li>
+	</ul>
+	<footer>刘子君作品&copy;</footer>
+	<script src="lib/swiper-4.5.0/dist/js/swiper.min.js"></script>
+	<script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
+	<script type="text/javascript">
+		var mySwiper = new Swiper ('.swiper-container', {
+		    loop: true, // 循环模式选项
+		    speed:300,   //切换速度
+		    autoplay : {
+		        delay:3000  //每隔三秒播一次
+		    },
+		    // 如果需要分页器
+		    pagination: {
+		      	el: '.swiper-pagination',
+		      	// 分页类型：自定义
+		      	type: 'custom',
+		      	// 自定义特殊类型分页器 （当前显示的图片，图片总数)
+		      	renderCustom: function (swiper, current, total) {
+		      	         var str ='<div class="lunbo-div">';
+		      	         for(var i=1;i<=total;i++){
+		      	         	if(i==current){
+		      	         		str=str+"<div class='active'></div>";
+		      	         	}else{
+								str=str+"<div></div>";		      	         		
+		      	         	}
+		      	         }
+		      	         str=str+"</div>";
+		      	         return str;
+		      	}
+		    }
+		  }) 
+		$(function(){
+			$(".nav-menu").click(function(){
+				$(this).toggleClass("menu-active");
+				$(".nav2").slideToggle();
+			})
+		})
+	</script>
+</body>
+</html>

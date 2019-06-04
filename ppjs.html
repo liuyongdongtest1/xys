@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no"> 	
+	<link rel="stylesheet" href="css/2.css">
+	<link rel="stylesheet" href="css/rmtj.css">
+	<link rel="stylesheet" href="css/ppjs.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="lib/swiper-4.5.0/dist/css/swiper.min.css">
+	<link rel="icon" href="img/20190526093044265_easyicon_net_32.ico" type="image/x-icon">
+</head>
+<body>
+	<header class="container clear">
+		<div class="d-2">TEMPLATE</div>
+		<ul class="nav">
+			<li><a href="index.html">首页</a></li>
+			<li><a href="rmtj.html">热门推荐</a></li>
+			<li class="active"><a href="ppjs.html">品牌介绍</a></li>
+			<li><a href="sszx.html">时尚咨询</a></li>
+		</ul>
+		<!-- 响应式菜单 -->
+		<div class="navbox">
+			<div class="nav-menu ">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<ul class="nav2 ">
+				<li></li>
+				<li><a href="index.html">首页</a></li>
+				<li ><a href="rmtj.html">热门推荐</a></li>
+				<li class="active"><a href="ppjs.html">品牌介绍</a></li>
+				<li><a href="sszx.html">时尚咨询</a></li>
+			</ul>
+		</div>
+	</header>
+	<div class="bjt-img">
+		<img src="img/A.jpg" alt="">
+	</div>
+	<div class="box_3 container_ppjs">
+		<div class="title font-12 color-808"><div class="font-20 color-333">品牌理念</div>精梳工艺    健康无污染</div>
+		<div class="box_3_box">
+			<div class="box_3_imgbox box_3_imgbox1"><img src="img/Q.jpg" alt=""></div>
+			<div class="box_3_imgbox box_3_imgbox2">
+				<div class="color-333 text-l">时尚轻女装</div>
+				<div class="dznz-img2-div font-12 text-l color-666">
+					<div>健康的健康的咖啡豆咖啡机快递费快递客服</div>
+					<div>道德观健康的健康的咖啡豆咖啡机快递费快递客服的</div>
+					<div>的感染健康的健康的咖啡豆咖啡机快递费快递客服然后第三代分份额</div>
+					<div>乱世老师健康的健康的咖啡豆咖啡机快递费快</div>
+					<div>看看时间地方健康的咖递客服</div>
+				</div>	
+			</div>	
+		</div>
+	</div>
+	<div class="box_3 container_ppjs">
+		<div class="box_3_box">
+			<div class="box_3_imgbox box_3_imgbox1 box_3_imgbox3"><img src="img/gQ.jpg" alt=""></div>
+			<div class="box_3_imgbox box_3_imgbox2 box_3_imgbox4">
+				<div class="font-20 color-333 text-l">精致的缝纫工艺</div>
+				<div class="font-12 color-333 text-l box_3_box_div_1">就看得见看得见超级难吃南昌南京南昌南昌就基地了留名马克马克极低极低基地等级登记就是你就是你</div>
+				<div class="dznz-img2-div dznz-img2-div_img font-12 text-l color-666">
+					<img src="img/Q4tgI.jpg" alt="">
+				</div>	
+			</div>	
+		</div>
+	</div>
+	<footer>刘子君作品&copy;</footer>
+	<script src="lib/swiper-4.5.0/dist/js/swiper.min.js"></script>
+	<script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
+	<script type="text/javascript">
+		var mySwiper = new Swiper ('.swiper-container', {
+		    loop: true, // 循环模式选项
+		    speed:300,   //切换速度
+		    autoplay : {
+		        delay:3000  //每隔三秒播一次
+		    },
+		    // 如果需要分页器
+		    pagination: {
+		      	el: '.swiper-pagination',
+		      	// 分页类型：自定义
+		      	type: 'custom',
+		      	// 自定义特殊类型分页器 （当前显示的图片，图片总数)
+		      	renderCustom: function (swiper, current, total) {
+		      	         var str ='<div class="lunbo-div">';
+		      	         for(var i=1;i<=total;i++){
+		      	         	if(i==current){
+		      	         		str=str+"<div class='active'></div>";
+		      	         	}else{
+								str=str+"<div></div>";		      	         		
+		      	         	}
+		      	         }
+		      	         str=str+"</div>";
+		      	         return str;
+		      	}
+		    }
+		  }) 
+		$(function(){
+			$(".nav-menu").click(function(){
+				$(this).toggleClass("menu-active");
+				$(".nav2").slideToggle();
+			})
+		})
+	</script>
+</body>
+</html>
